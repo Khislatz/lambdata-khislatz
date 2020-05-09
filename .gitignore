@@ -1,7 +1,7 @@
 
 
 
-#ignore the artifacts from the build process:
+# ignore artifacts from the build process:
 
 build/
 dist/
