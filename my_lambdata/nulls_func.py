@@ -8,10 +8,7 @@ def check_nulls(my_df):
     
     new_df = my_df.copy()
 
-    # using isnull() function   
-    new_df = new_df.isna()
-
-    return new_df
+    return new_df.isna()
 
 
 if __name__ == "__main__":
