@@ -3,6 +3,17 @@ from pandas import DataFrame
 
 def add_state_names(my_df):
 
+    '''
+    Adds a column of state 
+    names to accompany a corresponding column of state abbreviation 
+
+    Params:
+    my_df (pandas.DataFrame) has a column called "abbrev" with state abbreviation
+    
+    returns: 
+    copy of the original dataframe, with another column
+    '''
+
     # Plan: 
     # add a column of corresponding state names
     # dict with abbreviation/name mapping 
