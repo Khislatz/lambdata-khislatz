@@ -1,5 +1,6 @@
 # #    CHANGING FROM FUNCTIONAL APPROACH TO OOP  
 # #    USING MUTATION 
+## ## INHERITANCE 
 
 # State abbreviation -> Full Name and visa versa. FL -> Florida, etc. (Handle Washington DC and territories like Puerto Rico etc.)
 from pandas import DataFrame 

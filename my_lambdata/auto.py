@@ -1,4 +1,5 @@
 # autos.py
+#Inheritance
 
 class Auto():
     def __init__(self, make, model, year, color, num_wheels):
