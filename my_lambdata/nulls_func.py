@@ -23,4 +23,6 @@ if __name__ == "__main__":
 
     df2 = check_nulls(df)
     print(df2.head())
+
+    
   
