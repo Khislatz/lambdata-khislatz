@@ -6,10 +6,8 @@
 from pandas import DataFrame 
 
 class MyFrame(DataFrame):
-    def __init__(self, my_df):
-        self.my_frame = my_df # we are storing my_df on the instance itself 
-
-
+    #When we inherite from DataFrame class we can get rid of 
+    # constructor because DataFrame already has it
     def add_state_names(self):
         """
         Adds a column of state to accompany 
@@ -24,16 +22,17 @@ class MyFrame(DataFrame):
                     "DC": "District of Columbia", "TX": "Texas", "FL": "Florida",
                     "NY": "New York"}
 
-        self['name'] = self['abbrev'].map(names_map)
+        self['name'] = self['abbrev'].map(names_map) #self is referring to the instance inside of the 
+        # method. Outside of the method the instance is my_frame 
 
     #breakpoint(): helps to stop and investigate in terminal up to the breakpoint()function
 
-        return self.df
 
 
 if __name__ == "__main__":
 
-    my_frame = MyFrame({"abbrev":["CA", "CT", "CO", "DC", "TX", "FL", "NY"]})
+    # df = DataFrame({"abbrev":["CA", "CT", "CO", "DC", "TX", "FL", "NY"]})
+    my_frame = MyFrame({"abbrev":["CA", "CT", "CO", "DC", "TX", "FL", "NY"]}) # my_frame is an instance
     print(my_frame.columns)
     print(my_frame.head())
 

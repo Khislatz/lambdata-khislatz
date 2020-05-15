@@ -5,8 +5,8 @@ import numpy as np
 # Create a class
 class Dates():
     # Create a constructor
-    def __init__(self, df):
-        self.df = df
+    def __init__(self, my_df):
+        self.df = my_df
 
     # Function to split dates ("MM/DD/YYYY", etc.) into multiple columns
 
