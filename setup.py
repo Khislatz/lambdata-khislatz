@@ -16,6 +16,8 @@ setup(
     license="MIT",
     url="https://github.com/Khislatz/lambdata-khislatz",
     #keywords="",
-    packages=find_packages() # ["my_lambdata"]
+    packages = ["my_lambdata"] # find_packages() # ["my_lambdata"]
 )
 
+#find packages() returns a list 
+ 
