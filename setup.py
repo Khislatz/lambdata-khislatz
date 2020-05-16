@@ -17,7 +17,10 @@ setup(
     url="https://github.com/Khislatz/lambdata-khislatz",
     #keywords="",
     packages = ["my_lambdata"] # find_packages() # ["my_lambdata"]
+
 )
 
+# Since we don't want other people to see our test directory/package,
+# instead of find_packages() we use ['names of packages other than test'] 
 #find packages() returns a list 
  

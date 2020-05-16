@@ -6,7 +6,7 @@ from pandas import DataFrame
 
 class DataProcessor():
     def __init__(self, my_df):
-        self.df = my_df # we are storing my_df on the instance itself 
+        self.df = my_df # we are storing df on the instance itself 
 
 
     def add_state_names(self):
@@ -32,10 +32,13 @@ class DataProcessor():
 
 if __name__ == "__main__":
 
-    df = DataFrame({"abbrev":["CA", "CT", "CO", "DC", "TX", "FL", "NY"]})
+    df = DataFrame({"abbrev":["CA", "CT", "CO", "DC", "TX", "FL", "NY"]}) 
+
+    # df is an attribute of an instace processor 
 
     processor = DataProcessor(df) 
-    print(processor.df.head())
+    print(processor.df.head()) 
+
     processor.add_state_names()
     print(processor.df.head())
     #if we do it like last time then we will have to 
