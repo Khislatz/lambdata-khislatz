@@ -5,7 +5,7 @@ import pandas as pd
 
 # Create a class
 class Nulls:
-    # Create constructor
+    # Create a constructor
     def __init__(self, df):
         self.df = df
 

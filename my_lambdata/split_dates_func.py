@@ -29,3 +29,5 @@ if __name__ == "__main__":
 
     df2 = split_dates(df)
     print(df2.head())
+
+    
