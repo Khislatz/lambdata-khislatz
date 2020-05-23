@@ -103,8 +103,6 @@ FROM (
 	SELECT 
 	  charactercreator_character.character_id
 	  ,charactercreator_character.name as character_name
-	  -- ,inv.item_id
-	  -- ,w.item_ptr_id as weapon_id
 	  ,count(distinct armory_weapon.item_ptr_id) as weapon_count
 	FROM charactercreator_character 
 	LEFT JOIN charactercreator_character_inventory ON charactercreator_character.character_id = charactercreator_character_inventory.character_id
