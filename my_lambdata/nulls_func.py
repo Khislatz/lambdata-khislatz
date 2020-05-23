@@ -21,6 +21,8 @@ if __name__ == "__main__":
     df = pd.DataFrame(dict)
     print(df.head())
 
-    df2 = check_nulls(df)
+    df2 = check_nulls(df) # invoking a function
     print(df2.head())
+
+    
   
