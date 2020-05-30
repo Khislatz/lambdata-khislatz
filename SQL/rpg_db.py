@@ -5,6 +5,7 @@ import sqlite3
 #DB_FILEPATH = "rpg_db.db"
 DB_FILEPATH = os.path.join(os.path.dirname(__file__), "..", "SQL_data", "rpg_db.sqlite3")
 connection = sqlite3.connect(DB_FILEPATH)
+# connection.row_factory = sqlite3.Row
 print("CONNECTION:", connection)
 
 cursor = connection.cursor()
@@ -63,7 +64,8 @@ query8 = "SELECT count (distinct item_id) as non_weapons FROM armory_item JOIN a
 
 result8 = cursor.execute(query8).fetchall()
 print("There are ", result8, " non-weapon items;")
-
+# for row in result8:
+# 	print(row)
 
 # -- How many Items does each character have? (Return first 20 rows)
 # -- row per character (even the ones that have zero)
@@ -72,6 +74,9 @@ print("There are ", result8, " non-weapon items;")
 query9 = "SELECT charactercreator_character.character_id,charactercreator_character.name as character_name,count(distinct charactercreator_character_inventory.item_id) as items FROM charactercreator_character LEFT JOIN charactercreator_character_inventory on charactercreator_character.character_id = charactercreator_character_inventory.character_id GROUP BY charactercreator_character.character_id LIMIT 20;"
 
 result9 = cursor.execute(query9).fetchall()
+
+# for row in result9:
+# 	print(row)
 print("There are ", result9, " items per each character;")
 
 
@@ -113,5 +118,4 @@ LIMIT 20;
 """
 result12 = cursor.execute(query12).fetchall()
 print("In average there are ", result12, " weapons per each character;")
-
 
